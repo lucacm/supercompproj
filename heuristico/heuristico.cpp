@@ -9,7 +9,7 @@ struct Cidade
 {
     int id;
     double x; // coordenada em x
-    double y; // coordenada em y
+    double y; // coord/* code */enada em y
 };
 
 double distanceCalculate(double x1, double y1, double x2, double y2)
