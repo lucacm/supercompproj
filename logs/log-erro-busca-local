@@ -1,0 +1,179 @@
+====================
+Entrada: ./in-0.txt
+Caminho Tem Distancia Mostrada True
+Fez 10N Solucoes False
+Nao Tem Troca True
+Passa Por Todas Cidades True
+Troca encontrada:  0 1
+Melhoria: 12.0 -> 10.0
+Troca acima encontrada na linha 0
+Toda Solucao Eh Otimo Local False
+Caminho incorreto na linha 1. Mostrada 11.0, calculada 10.0
+/home/luca/.local/lib/python3.10/site-packages/numba/core/ir_utils.py:2147: NumbaPendingDeprecationWarning: 
+Encountered the use of a type that is scheduled for deprecation: type 'reflected list' found for argument 'order' of function 'tamanho_tour_nb'.
+
+For more information visit https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-reflection-for-list-and-set-types
+
+File "../corretor.py", line 84:
+@nb.jit
+def tamanho_tour_nb(order, distances):
+^
+
+  warnings.warn(NumbaPendingDeprecationWarning(msg, loc=loc))
+[4, 2, 1, 0, 3] 10.0 10.0
+Toda Solucao Tem Caminho Correto False
+====================
+Entrada: ./in-1.txt
+Distância calculada: 4.0 Mostrada: 3.0
+Caminho Tem Distancia Mostrada False
+Fez 10N Solucoes False
+Nao Tem Troca True
+Passa Por Todas Cidades True
+Troca encontrada:  0 1
+Melhoria: 4.82842712474619 -> 4.0
+Troca acima encontrada na linha 1
+Toda Solucao Eh Otimo Local False
+Caminho incorreto na linha 0. Mostrada 3.0, calculada 4.0
+[2, 0, 1, 3] 4.0 4.0
+Toda Solucao Tem Caminho Correto False
+====================
+Entrada: ./in-10.txt
+Distância calculada: 2506.203114220728 Mostrada: 2514.86
+Caminho Tem Distancia Mostrada False
+Fez 10N Solucoes False
+Troca encontrada:  0 5
+Melhoria: 2506.203114220728 -> 2494.6752928020874
+Nao Tem Troca False
+Passa Por Todas Cidades True
+Troca encontrada:  0 1
+Melhoria: 2615.0589532418207 -> 2613.078388390806
+Troca acima encontrada na linha 0
+Toda Solucao Eh Otimo Local False
+Caminho incorreto na linha 0. Mostrada 2604.87, calculada 2615.0589532418207
+[7, 45, 39, 3, 22, 1, 31, 41, 17, 30, 8, 23, 5, 43, 47, 29, 33, 20, 12, 25, 4, 19, 48, 32, 35, 14, 38, 26, 11, 28, 36, 49, 37, 15, 10, 2, 27, 42, 9, 34, 44, 40, 21, 16, 24, 13, 0, 46, 6, 18] 2615.0589532418207 2615.0589532418207
+Toda Solucao Tem Caminho Correto False
+====================
+Entrada: ./in-2.txt
+Caminho Tem Distancia Mostrada True
+Fez 10N Solucoes False
+Nao Tem Troca True
+Passa Por Todas Cidades True
+Troca encontrada:  0 1
+Melhoria: 4.82842712474619 -> 4.0
+Troca acima encontrada na linha 1
+Toda Solucao Eh Otimo Local False
+Caminho incorreto na linha 0. Mostrada 4.41421, calculada 4.0
+[2, 0, 1, 3] 4.0 4.0
+Toda Solucao Tem Caminho Correto False
+====================
+Entrada: ./in-3.txt
+Distância calculada: 803.024441864266 Mostrada: 764.576
+Caminho Tem Distancia Mostrada False
+Fez 10N Solucoes False
+Troca encontrada:  0 1
+Melhoria: 803.024441864266 -> 752.095165528214
+Nao Tem Troca False
+Passa Por Todas Cidades True
+Troca encontrada:  0 1
+Melhoria: 811.4543280192039 -> 791.975056236159
+Troca acima encontrada na linha 0
+Toda Solucao Eh Otimo Local False
+Caminho incorreto na linha 0. Mostrada 879.139, calculada 811.4543280192039
+[2, 4, 11, 12, 7, 0, 13, 3, 14, 5, 9, 6, 10, 8, 1] 811.4543280192039 811.4543280192039
+Toda Solucao Tem Caminho Correto False
+====================
+Entrada: ./in-4.txt
+Distância calculada: 906.7180508059824 Mostrada: 946.105
+Caminho Tem Distancia Mostrada False
+Fez 10N Solucoes False
+Troca encontrada:  0 2
+Melhoria: 906.7180508059824 -> 895.7212383378724
+Nao Tem Troca False
+Passa Por Todas Cidades True
+Troca encontrada:  0 2
+Melhoria: 986.4620991724726 -> 928.3136653669325
+Troca acima encontrada na linha 0
+Toda Solucao Eh Otimo Local False
+Caminho incorreto na linha 0. Mostrada 1032.82, calculada 986.4620991724726
+[7, 13, 10, 3, 6, 1, 18, 2, 17, 9, 8, 19, 5, 16, 0, 11, 15, 4, 12, 14] 986.4620991724726 986.4620991724726
+Toda Solucao Tem Caminho Correto False
+====================
+Entrada: ./in-5.txt
+Distância calculada: 2216.377423907288 Mostrada: 2203.49
+Caminho Tem Distancia Mostrada False
+Fez 10N Solucoes False
+Troca encontrada:  0 1
+Melhoria: 2216.377423907288 -> 2184.0527452055353
+Nao Tem Troca False
+Passa Por Todas Cidades True
+Troca encontrada:  0 10
+Melhoria: 2291.238693939486 -> 2282.723070263902
+Troca acima encontrada na linha 0
+Toda Solucao Eh Otimo Local False
+Caminho incorreto na linha 0. Mostrada 2292.45, calculada 2291.238693939486
+[7, 13, 39, 3, 22, 1, 31, 24, 17, 30, 8, 23, 5, 16, 0, 29, 33, 20, 12, 25, 4, 19, 6, 32, 35, 14, 38, 26, 11, 28, 36, 18, 37, 15, 10, 2, 27, 21, 9, 34] 2291.238693939486 2291.238693939486
+Toda Solucao Tem Caminho Correto False
+====================
+Entrada: ./in-6.txt
+Distância calculada: 5362.280713847318 Mostrada: 5372.6
+Caminho Tem Distancia Mostrada False
+Fez 10N Solucoes False
+Troca encontrada:  0 1
+Melhoria: 5362.280713847318 -> 5350.389918192668
+Nao Tem Troca False
+Passa Por Todas Cidades True
+Troca encontrada:  0 1
+Melhoria: 5481.152339524119 -> 5452.550430392285
+Troca acima encontrada na linha 0
+Toda Solucao Eh Otimo Local False
+Caminho incorreto na linha 0. Mostrada 5502.14, calculada 5481.152339524119
+[58, 45, 39, 71, 99, 1, 60, 77, 81, 56, 8, 63, 5, 91, 47, 29, 33, 20, 61, 84, 70, 19, 85, 75, 68, 14, 38, 26, 11, 92, 36, 66, 37, 15, 10, 2, 98, 42, 80, 93, 64, 40, 74, 83, 24, 95, 86, 46, 52, 79, 43, 97, 6, 44, 67, 27, 30, 31, 7, 21, 57, 73, 69, 23, 53, 62, 90, 28, 82, 34, 96, 3, 32, 12, 59, 72, 89, 41, 9, 18, 94, 17, 35, 16, 25, 48, 0, 55, 13, 4, 49, 50, 54, 65, 51, 88, 76, 78, 87, 22] 5481.152339524119 5481.152339524119
+Toda Solucao Tem Caminho Correto False
+====================
+Entrada: ./in-7.txt
+Distância calculada: 241.78704919714048 Mostrada: 240.736
+Caminho Tem Distancia Mostrada False
+Fez 10N Solucoes False
+Nao Tem Troca True
+Passa Por Todas Cidades True
+Troca encontrada:  0 1
+Melhoria: 296.2953852602658 -> 241.78704919714048
+Troca acima encontrada na linha 0
+Toda Solucao Eh Otimo Local False
+Caminho incorreto na linha 0. Mostrada 310.531, calculada 296.2953852602658
+[2, 4, 1, 0, 3] 296.2953852602658 296.2953852602658
+Toda Solucao Tem Caminho Correto False
+====================
+Entrada: ./in-8.txt
+Distância calculada: 430.7993488954123 Mostrada: 412.571
+Caminho Tem Distancia Mostrada False
+Fez 10N Solucoes False
+Troca encontrada:  0 1
+Melhoria: 430.7993488954123 -> 430.01447428774367
+Nao Tem Troca False
+Passa Por Todas Cidades True
+Troca encontrada:  0 9
+Melhoria: 477.08322454686385 -> 476.72561539024207
+Troca acima encontrada na linha 0
+Toda Solucao Eh Otimo Local False
+Caminho incorreto na linha 0. Mostrada 545.947, calculada 477.08322454686385
+[7, 0, 8, 3, 6, 1, 5, 2, 4, 9] 477.08322454686385 477.08322454686385
+Toda Solucao Tem Caminho Correto False
+====================
+Entrada: ./in-9.txt
+Distância calculada: 1604.9151265687613 Mostrada: 1617.83
+Caminho Tem Distancia Mostrada False
+Fez 10N Solucoes False
+Troca encontrada:  0 3
+Melhoria: 1604.9151265687613 -> 1603.8196577487406
+Nao Tem Troca False
+Passa Por Todas Cidades True
+Troca encontrada:  0 1
+Melhoria: 1703.1224851092406 -> 1702.5977934736545
+Troca acima encontrada na linha 0
+Toda Solucao Eh Otimo Local False
+Caminho incorreto na linha 0. Mostrada 1791.79, calculada 1703.1224851092406
+[7, 13, 10, 3, 22, 1, 18, 24, 17, 27, 8, 23, 5, 16, 0, 29, 15, 20, 12, 25, 4, 19, 6, 21, 2, 14, 9, 26, 11, 28] 1703.1224851092406 1703.1224851092406
+Toda Solucao Tem Caminho Correto False
+Busca local (sequencial) : False
+
