@@ -13,21 +13,23 @@ struct Cidade
     double y;
 };
 
-//corrigindo calculo da distancia
+// corrigindo calculo da distancia
 double distanceCalculate(Cidade first, Cidade second)
 {
-    return sqrt(pow(first.x - second.x, 2) + pow(first.y - second.y, 2));
+    double distancia = sqrt(pow(first.x - second.x, 2) + pow(first.y - second.y, 2));
+    return distancia;
 }
 
-//corrigindo funcao distanciaTotal
+// corrigindo funcao distanciaTotal
 double distanceTotal(vector<Cidade> cidades)
 {
+    int N = cidades.size();
     double total_dist = 0;
-    for (int i = 0; i < cidades.size() - 1; i++)
+    for (int i = 0; i < N - 1; i++)
     {
         total_dist += distanceCalculate(cidades[i], cidades[i + 1]);
     }
-    total_dist += distanceCalculate(cidades[cidades.size() - 1], cidades[0]);
+    total_dist += distanceCalculate(cidades[N - 1], cidades[0]);
     return total_dist;
 }
 
@@ -47,7 +49,7 @@ int main()
         id_cidades.push_back(cidade.id);
     }
 
-    double atual_distance;
+    double atual_distance = 0;
     double melhor_distance = INFINITY;
     vector<Cidade> melhor_caminho = cidades;
     vector<Cidade> nova_cidade = cidades;
@@ -60,7 +62,7 @@ int main()
             nova_cidade[i] = cidades[id_cidades[i]];
         }
 
-        //calcula a distancia total do novo caminho
+        // calcula a distancia total do novo caminho
         atual_distance = distanceTotal(nova_cidade);
 
         if (atual_distance < melhor_distance)
