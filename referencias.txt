@@ -1,0 +1,4 @@
+referências utilizadas na confecção do código:
+https://www.geeksforgeeks.org/travelling-salesman-problem-set-1/
+https://www.geeksforgeeks.org/print-all-possible-combinations-of-r-elements-in-a-given-array-of-size-n/
+https://en.cppreference.com/w/cpp/algorithm/next_permutation
