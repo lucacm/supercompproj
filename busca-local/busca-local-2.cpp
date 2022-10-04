@@ -24,13 +24,17 @@ double distanceCalculate(Cidade first, Cidade second)
 // corrigindo funcao distanciaTotal
 double distanceTotal(vector<Cidade> cidades)
 {
+    // define variável de tamanho das cidades
     int N = cidades.size();
+    // distância total do caminho da cidade
     double total_dist = 0;
-    for (int i = 0; i < N - 1; i++)
+    // faz um loop para calcular a distância de todas as cidades
+    for (int i = 0; i < N-1; i++)
     {
-        total_dist += distanceCalculate(cidades[i], cidades[i + 1]);
+        total_dist += distanceCalculate(cidades[i], cidades[i+1]);
     }
-    total_dist += distanceCalculate(cidades[N - 1], cidades[0]);
+    // calcula a volta da ultima cidade até a cidade original
+    total_dist += distanceCalculate(cidades[N-1], cidades[0]);
     return total_dist;
 }
 
