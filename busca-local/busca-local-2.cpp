@@ -35,7 +35,8 @@ double distanceTotal(vector<Cidade> cidades)
 }
 
 int main()
-{
+{   
+    // lógica para ler as entradas
     int N;
     cin >> N;
     vector<Cidade> cidades;
@@ -48,30 +49,36 @@ int main()
         cidades.push_back(cidade);
     }
 
+    // cria uma váriavel que atualiza a melhor distância e o melhor caminho
     double melhor_dist = INFINITY;
     vector<Cidade> melhor_caminho;
 
+    // cria um generator com seed = 10 para fazer o shuffle do vetor
     default_random_engine generator(10);
     shuffle(begin(cidades), end(cidades), generator);
 
-    melhor_dist = INFINITY;
+    // distância total do caminho do vetor
     double total_dist;
 
     for (int i = 0; i < 10 * N; i++)
     {
+        // for para fazer os swaps e calcular nova distância
         for (int position = 0; position < N - 1; position++)
         {
             total_dist = distanceTotal(cidades);
 
+            // atualiza variáveis de resultado
             if (total_dist < melhor_dist)
             {
                 melhor_dist = total_dist;
                 melhor_caminho = cidades;
             }
 
+            // faz o swap entre cidades e vizinhos
             iter_swap(cidades.begin() + position, cidades.begin() + position + 1);
         }
 
+        // printa o erro
         cerr << "local: " << total_dist << " ";
         for (int i = 0; i < N; i++)
         {
@@ -80,6 +87,7 @@ int main()
         cerr << endl;
     }
 
+    // printa o resultado
     cout << melhor_dist << " " << 0 << endl;
     for (int i = 0; i < N; i++)
     {
