@@ -14,31 +14,23 @@ struct Cidade
     double y;
 };
 
-double distanceCalculate(double x1, double y1, double x2, double y2)
+// corrigindo calculo da distancia
+double distanceCalculate(Cidade first, Cidade second)
 {
-    double x = x1 - x2; // calculating number to square in next step
-    double y = y1 - y2;
-    double dist;
-
-    dist = pow(x, 2) + pow(y, 2); // calculating Euclidean distance
-    dist = sqrt(dist);
-
-    return dist;
+    double distancia = sqrt(pow(first.x - second.x, 2) + pow(first.y - second.y, 2));
+    return distancia;
 }
 
-double distanciaTotal(vector<Cidade> cidades)
+// corrigindo funcao distanciaTotal
+double distanceTotal(vector<Cidade> cidades)
 {
     int N = cidades.size();
-    double total_dist;
-
-    int i = 0;
-    while (i < N-1)
+    double total_dist = 0;
+    for (int i = 0; i < N - 1; i++)
     {
-        total_dist += distanceCalculate(cidades[i].x, cidades[i].y, cidades[i+1].x, cidades[i+1].y);
-        i++;
+        total_dist += distanceCalculate(cidades[i], cidades[i + 1]);
     }
-
-    total_dist += distanceCalculate(cidades[i].x, cidades[i].y, cidades[0].x, cidades[0].x);
+    total_dist += distanceCalculate(cidades[N - 1], cidades[0]);
     return total_dist;
 }
 
@@ -67,16 +59,16 @@ int main()
 
     for (int i = 0; i < 10 * N; i++)
     {
-        for (int position = 0; position < N-1; position++)
-        {        
-            total_dist = distanciaTotal(cidades);
+        for (int position = 0; position < N - 1; position++)
+        {
+            total_dist = distanceTotal(cidades);
 
             if (total_dist < melhor_dist)
             {
                 melhor_dist = total_dist;
                 melhor_caminho = cidades;
             }
-            
+
             iter_swap(cidades.begin() + position, cidades.begin() + position + 1);
         }
 
