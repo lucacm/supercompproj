@@ -28,7 +28,7 @@ double distanceTotal(vector<Cidade> cidades)
     // distância total do caminho da cidade
     double total_dist = 0;
     // faz um loop para calcular a distância de todas as cidades
-    for (int i = 0; i < N - 1; i++)
+    for (int i = 0; i < N-1; i++)
     {
         total_dist += distanceCalculate(cidades[i], cidades[i+1]);
     }
