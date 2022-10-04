@@ -63,28 +63,29 @@ int main()
     shuffle(begin(cidades), end(cidades), generator);
 
     melhor_dist = INFINITY;
+    double total_dist;
 
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 10 * N; i++)
     {
         for (int position = 0; position < N-1; position++)
         {        
-            double total_dist = distanciaTotal(cidades);
+            total_dist = distanciaTotal(cidades);
 
             if (total_dist < melhor_dist)
             {
                 melhor_dist = total_dist;
                 melhor_caminho = cidades;
             }
-
-            cerr << "local: " << total_dist << " ";
-            for (int i = 0; i < N; i++)
-            {
-                cerr << cidades[i].id << " ";
-            }
-            cerr << endl;
-
+            
             iter_swap(cidades.begin() + position, cidades.begin() + position + 1);
         }
+
+        cerr << "local: " << total_dist << " ";
+        for (int i = 0; i < N; i++)
+        {
+            cerr << cidades[i].id << " ";
+        }
+        cerr << endl;
     }
 
     cout << melhor_dist << " " << 0 << endl;
